@@ -1,0 +1,78 @@
+body{
+	font-family: 'IBM Plex Sans', sans-serif;
+	background-image: linear-gradient(rgba(117,17,74,0.5),rgba(117,17,74,0.5)),url(images/bgImg.jpg);
+	background-size: 100% 100%;
+	color: #fff;
+}
+#form2{
+	display: none;
+}
+#sign-in-tab:checked ~ #form2, #sign-up-tab:checked ~ #form1{
+	display: block;
+}
+#sign-in-tab:checked ~ #form1, #sign-up-tab:checked ~ #form2{
+	display: none;
+}
+.tab:not(:checked) + label{
+	opacity: 0.8;
+}
+.login-form{
+	position: absolute;
+	top: 20%;
+	left: 7%;
+	width: 400px;
+}
+.tab{
+	display: none;
+}
+.tab-header{
+	width: 48%;
+	text-align: center;
+	display: inline-block;
+	font-size: 18px;
+	cursor: pointer;
+	
+}
+.tab-header:after{
+	display: block;
+	content: '';
+	height: 20px;
+	border-bottom: 2px solid rgb(173,56,120);
+	transform: scaleX(0);
+	transition: transform 250ms ease-in-out;
+}
+.tab:checked + label:after{
+	transform: scaleX(1);
+}
+.header{
+	margin: 10px 0 10px 0;
+	font-size: 20px;
+	text-align: center;
+	color: rgba(255,255,255,0.8);
+}
+.form-input input{
+	border-radius: 10px;
+	height: 35px;
+	margin: 10px 0;
+	width: 100%;
+	border-width: 0;
+	background-color: rgba(255,255,255,0.2);
+	padding: 10px;
+	color: #fff;
+}
+input::placeholder, #check{
+	color: rgba(255,255,255,0.8);
+}
+input:focus{
+	outline: none;
+}
+.submit-button{
+	margin: 20px 0;
+	width: 100%;
+	height: 35px;
+	border-radius: 10px;
+	border-width: 0;
+	text-align: center;
+	background-color: rgb(173,56,120);
+	color: #fff;
+}
